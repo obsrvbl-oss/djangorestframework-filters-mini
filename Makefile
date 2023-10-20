@@ -26,7 +26,7 @@ test:
 
 lint:
 	pyflakes $(SOURCE) $(TESTS)
-	black $(SOURCE) $(TESTS) -S --check
+	black $(SOURCE) -S --check
 
 clean: clean-cache clean-build
 

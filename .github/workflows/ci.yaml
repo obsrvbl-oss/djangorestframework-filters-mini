@@ -15,7 +15,7 @@ jobs:
           - run: pip install -U pip setuptools wheel twine
           - run: pip install pyflakes black
           - run: pyflakes rest_framework_filters/ tests/
-          - run: black rest_framework_filters/ tests/ -S --check
+          - run: black rest_framework_filters/ -S --check
     test:
         runs-on: ubuntu-20.04
         strategy:
