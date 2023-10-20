@@ -39,6 +39,7 @@ jobs:
                 python-version: ${{ matrix.pyver }}
           - run: pip install -U pip setuptools wheel twine
           - run: pip install "Django ~= ${{ matrix.djver }}.0" djangorestframework django-filter
+          - run: pip install coverage
           - run: pip check
           - run: coverage run --source=rest_framework_filters/ --branch manage.py test
           - run: coverage report --show-missing
