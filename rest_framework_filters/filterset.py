@@ -138,9 +138,7 @@ class FilterSet(_FilterSet, metaclass=FilterSetMetaclass):
     def get_filter_subset(cls, params, rel=None):
         names = {cls.get_param_filter_name(x, rel) for x in params}
         return {
-            k: v
-            for k, v in cls.base_filters.items()
-            if k is not None and k in names
+            k: v for k, v in cls.base_filters.items() if k is not None and k in names
         }
 
     @classmethod
