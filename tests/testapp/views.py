@@ -1,5 +1,5 @@
 
-from rest_framework import pagination, viewsets
+from rest_framework import viewsets
 
 from rest_framework_filters import backends
 

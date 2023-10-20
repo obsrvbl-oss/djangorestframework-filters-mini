@@ -1,6 +1,5 @@
 import sys
 import unittest
-import warnings
 
 import django_filters
 from django.test import TestCase

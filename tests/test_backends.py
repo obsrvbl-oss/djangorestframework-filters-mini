@@ -1,8 +1,6 @@
-from urllib.parse import quote, urlencode
+from urllib.parse import urlencode
 
 import django_filters
-from django.test import modify_settings
-from rest_framework import status
 from rest_framework.test import APIRequestFactory, APITestCase
 
 from rest_framework_filters import FilterSet, filters
