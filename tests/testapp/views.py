@@ -39,19 +39,6 @@ class UnfilteredUserViewSet(viewsets.ModelViewSet):
     filter_backends = [backends.RestFrameworkFilterBackend]
 
 
-class ComplexFilterFieldsUserViewSet(FilterFieldsUserViewSet):
-    queryset = User.objects.order_by('pk')
-    filter_backends = (backends.ComplexFilterBackend, )
-    filterset_fields = {
-        'id': '__all__',
-        'username': '__all__',
-        'email': '__all__',
-    }
-
-    class pagination_class(pagination.PageNumberPagination):
-        page_size_query_param = 'page_size'
-
-
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
