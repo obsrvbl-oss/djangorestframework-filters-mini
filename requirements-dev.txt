@@ -1,0 +1,6 @@
+djangorestframework
+django-filter >= 2.0
+
+black
+coverage
+pyflakes
