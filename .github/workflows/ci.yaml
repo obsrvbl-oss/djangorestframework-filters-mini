@@ -73,4 +73,5 @@ jobs:
           - uses: actions/download-artifact@v3
             with:
                 name: distributions
-          - run: ls -l
+          - if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
+            uses: pypa/gh-action-pypi-publish@release/v1
