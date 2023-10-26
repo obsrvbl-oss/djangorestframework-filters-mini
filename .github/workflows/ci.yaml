@@ -73,4 +73,5 @@ jobs:
           - uses: actions/download-artifact@v3
             with:
                 name: distributions
+                path: dist/
           - uses: pypa/gh-action-pypi-publish@release/v1
