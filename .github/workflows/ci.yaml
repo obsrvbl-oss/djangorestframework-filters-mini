@@ -8,8 +8,8 @@ jobs:
     lint:
         runs-on: ubuntu-20.04
         steps:
-          - uses: actions/checkout@v2
-          - uses: actions/setup-python@v2
+          - uses: actions/checkout@v3
+          - uses: actions/setup-python@v3
             with:
                 python-version: 3.9
           - run: pip install -U pip setuptools wheel twine
@@ -33,8 +33,8 @@ jobs:
                   - '4.2'
         name: Python ${{ matrix.pyver }} Django ${{ matrix.djver }}
         steps:
-          - uses: actions/checkout@v2
-          - uses: actions/setup-python@v2
+          - uses: actions/checkout@v3
+          - uses: actions/setup-python@v3
             with:
                 python-version: ${{ matrix.pyver }}
           - run: pip install -U pip setuptools wheel twine
@@ -49,8 +49,8 @@ jobs:
           - lint
           - test
         steps:
-          - uses: actions/checkout@v2
-          - uses: actions/setup-python@v2
+          - uses: actions/checkout@v3
+          - uses: actions/setup-python@v3
             with:
                 python-version: 3.9
           - run: pip install -U pip setuptools wheel
@@ -69,7 +69,7 @@ jobs:
             # https://docs.pypi.org/trusted-publishers/using-a-publisher/
             id-token: write
         steps:
-          - uses: actions/checkout@v2
+          - uses: actions/checkout@v3
           - uses: actions/download-artifact@v3
             with:
                 name: distributions
